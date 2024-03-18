@@ -1,0 +1,1 @@
+var o=document.getElementById("modal"),l=document.querySelectorAll(".modal-close"),c=()=>{o.style.display="block"},t=()=>{o.style.display="none"};l.forEach(e=>e.addEventListener("click",t));export{c as openModal};

@@ -1,0 +1,1 @@
+var a=async()=>{try{let t=await fetch("https://t-pay.iqfit.app/subscribe/list-test");if(!t.ok)throw new Error("Failed to fetch data");return await t.json()}catch{throw new Error("Failed to fetch data")}},r=a();export{r as fetchedData};
