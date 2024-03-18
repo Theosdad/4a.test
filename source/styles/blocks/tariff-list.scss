@@ -1,0 +1,186 @@
+.tariff-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+    &__item {
+        padding: 26px 64px 26px 24px;
+        border: 2px solid $mischka;
+        border-radius: 20px;
+        background: $white;
+        position: relative;
+        user-select: none;
+        transition: all 0.5s ease-in;
+
+        cursor: pointer;
+
+        &::after {
+            content: attr(data-discount);
+            color: $white;
+            font-size: 13.33px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+
+            background: url('../../images/label.png') no-repeat center / contain;
+
+            position: absolute;
+            top: 4px;
+            right: 9px;
+        }
+
+        &.selected {
+            border: 2px solid $egg-blue;
+            background: rgba($color: $egg-blue, $alpha: 0.05);
+            transition: all 0.5s ease-in;
+        }
+
+        &.no-discount {
+            &::after {
+                content: none;
+            }
+
+            del {
+                visibility: hidden;
+            }
+        }
+    }
+
+    &__insert {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+
+        h2 {
+            color: $nevada;
+            font-family: $ff-bebas-neue;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 100%;
+            min-width: 78px;
+        }
+
+        span {
+            font-size: 44px;
+            font-weight: 700;
+            line-height: 110%;
+            letter-spacing: -2px;
+            min-width: 125px;
+            text-align: center;
+        }
+    }
+
+    &__subtitle {
+        display: flex;
+        justify-content: space-between;
+
+        span {
+            color: $bluewood;
+            font-size: 14px;
+            line-height: 130%;
+            max-width: 105px;
+        }
+
+        del {
+            color: $manatee;
+            font-size: 20px;
+            line-height: 110%;
+        }
+    }
+
+    @media (min-width: $desktop) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 12px;
+        row-gap: 40px;
+
+        &__item {
+            padding: 23px;
+            flex-basis: 220px;
+            flex-grow: 1;
+
+            &::after {
+                font-size: 19px;
+                width: 70px;
+                height: 70px;
+                top: -35px;
+                right: 5px;
+            }
+
+            &:last-child {
+
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+
+                .tariff-list__insert {
+                    flex-direction: row;
+                    align-items: last baseline;
+                    justify-content: flex-start;
+                    column-gap: 20px;
+
+                    h2 {
+                        margin-left: 8px;
+                        align-self: auto;
+                    }
+                }
+
+                .tariff-list__subtitle {
+                    flex-direction: row-reverse;
+                    align-items: center;
+                    justify-content: flex-start;
+
+                    span {
+                        display: inline;
+                        max-width: 165px;
+                        text-align: left;
+                    }
+
+                    del {
+                        margin-right: 55px;
+                    }
+                }
+            }
+        }
+
+        &__insert {
+            margin-top: 22px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            row-gap: 20px;
+
+            h2 {
+                font-size: 30px;
+                align-self: flex-start;
+                margin-left: 8px;
+            }
+
+            span {
+                font-size: 50px;
+            }
+        }
+
+        &__subtitle {
+            flex-direction: column-reverse;
+            align-items: center;
+            row-gap: 20px;
+
+            span {
+                text-align: center;
+                font-size: 16px;
+                max-width: 150px;
+            }
+
+            del {
+                align-self: flex-end;
+                margin-right: 50px;
+                font-size: 24px;
+            }
+        }
+    }
+}

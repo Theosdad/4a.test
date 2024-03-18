@@ -1,0 +1,49 @@
+@font-face {
+    font-family: "Bebas Neue";
+    src:
+        url("../../fonts/bebas-neue.woff2") format("woff2"),
+        url("../../fonts/bebas-neue.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Rubik";
+    src:
+        url("../../fonts/rubik-medium.woff2") format("woff2"),
+        url("../../fonts/rubik-medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Rubik";
+    src:
+        url("../../fonts/rubik-bold.woff2") format("woff2"),
+        url("../../fonts/rubik-bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "PT Root UI";
+    src:
+        url("../../fonts/pt-root-ui-medium.woff2") format("woff2"),
+        url("../../fonts/pt-root-ui-medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "PT Root UI";
+    src:
+        url("../../fonts/pt-root-ui-bold.woff2") format("woff2"),
+        url("../../fonts/pt-root-ui-bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
